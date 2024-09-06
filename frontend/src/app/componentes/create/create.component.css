@@ -1,0 +1,122 @@
+/* Estilos gerais do formulário */
+form {
+  width: 70%;
+  margin: 2rem auto 0 auto;
+  text-align: center;
+}
+
+/* Estilos do cabeçalho */
+h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 3rem;
+  color: rgb(83, 83, 83);
+}
+
+/* Estilos do grupo de inputs */
+.group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 20px;
+}
+
+/* Estilos dos campos de input */
+.input-field {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  outline: none;
+  background-color: transparent;
+}
+
+/* Estilos do label do input */
+.input-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 16px;
+  color: rgba(204, 204, 204, 0);
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+
+
+.input-field:focus + .input-label + .input-highlight {
+  width: 100%;
+}
+
+/* Estilos para o container de botões */
+.buttons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+
+}
+
+/* Estilos gerais dos botões */
+button {
+  margin-right: 0.5rem;
+  padding: 0.8em 2em;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+/* Estilos específicos para o botão "Criar" */
+.buttonCriar {
+  --bg: #000;
+  --hover-bg: #08ec04;
+  --hover-text: #000;
+  color: #fff;
+  background: var(--bg);
+  border: 1px solid var(--bg);
+}
+
+.buttonCriar:hover {
+  color: var(--hover-text);
+  background: var(--hover-bg);
+  box-shadow: 0.25rem 0.25rem var(--bg);
+  transform: translate(-0.25rem, -0.25rem);
+}
+
+.buttonCriar:active {
+  background: var(--bg);
+  transform: translate(0);
+  box-shadow: none;
+}
+
+/* Estilos específicos para o botão "Cancelar" */
+.button.cancelar {
+  --bg: #000;
+  --hover-bg: #e40606;
+  --hover-text: #000;
+  color: #fff;
+  background: var(--bg);
+  border: 1px solid var(--bg);
+}
+
+.button.cancelar:hover {
+  color: var(--hover-text);
+  background: var(--hover-bg);
+  box-shadow: 0.25rem 0.25rem var(--bg);
+  transform: translate(-0.25rem, -0.25rem);
+}
+
+.button.cancelar:active {
+  background: var(--bg);
+  transform: translate(0);
+  box-shadow: none;
+}
+
+
+

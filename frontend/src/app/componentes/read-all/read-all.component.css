@@ -1,0 +1,190 @@
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+
+.container {
+  border: none;
+  width: 85%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-bottom: 60px;
+}
+
+.badge {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.badge button {
+  --bg: #000;
+  --hover-bg: #08ec04;
+  --hover-text: #000;
+  color: #fff;
+  cursor: pointer;
+  border: 1px solid var(--bg);
+  border-radius: 4px;
+  padding: 0.8em 2em;
+  background: var(--bg);
+  transition: 0.2s;
+}
+
+.badge button:hover {
+  color: var(--hover-text);
+  transform: translate(-0.25rem, -0.25rem);
+  background: var(--hover-bg);
+  box-shadow: 0.25rem 0.25rem var(--bg);
+}
+
+.badge button:active {
+  transform: translate(0);
+  box-shadow: none;
+}
+
+.content {
+  width: 100%;
+}
+
+.novo-todo {
+  width: 100%;
+  margin-top: 3rem;
+  color: blueviolet;
+}
+
+mat-card {
+  margin-top: 0.8rem;
+  padding: 1rem;
+  border: none;
+  background-color: #ececec;
+  border-radius: 0;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+p {
+  text-align: end;
+  font-weight: 500;
+  color: rgb(114, 111, 111);
+  margin-bottom: 0;
+}
+
+.actions {
+  text-align: end;
+}
+
+.actions button {
+  margin: 0.3rem;
+}
+
+#done {
+  background-color: #08ec04;
+  color: white;
+  border: none;
+  border-radius: 50%;
+}
+
+#done:active {
+  background-color: #80e6ab;
+  transform: scale(0.97);
+}
+
+#done:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.novo-todo {
+  --bg: #050505;
+  --hover-bg: #08ec04;
+  --hover-text: #000;
+  color: #fff;
+  cursor: pointer;
+  border: 1px solid var(--bg);
+  border-radius: 4px;
+  padding: 0.5em 1em;
+  background: var(--bg);
+  transition: 0.2s;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.novo-todo:hover {
+  color: var(--hover-text);
+  transform: translate(-0.25rem, -0.25rem);
+  background: var(--hover-bg);
+  box-shadow: 0.25rem 0.25rem var(--bg);
+}
+
+.novo-todo:active {
+  transform: translate(0);
+  box-shadow: none;
+}
+
+#edit {
+  background-color: rgb(14, 115, 126);
+  border: none;
+  border-radius: 50%;
+}
+
+#edit:active {
+  background-color: #63dae7;
+  transform: scale(0.97);
+}
+
+#edit:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+#delete {
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 50%;
+}
+
+#delete:active {
+  background-color: #e7654e;
+  transform: scale(0.97);
+}
+
+#delete:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+mat-toolbar.footer {
+  height: 30px;
+  width: 100%;
+  justify-content: center;
+  font-size: 0.8rem;
+  background-color: #ececec;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  z-index: 10;
+}
+
+mat-card {
+  margin-top: 0.8rem;
+  padding: 1rem;
+  border: none;
+  background-color: #ececec;
+  border-radius: 0;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  box-shadow: 0 16px 24px rgba(0, 0, 0, 0.24), 0 6px 8px rgba(0, 0, 0, 0.12);
+}
+
+.mat-mdc-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mat-mdc-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}

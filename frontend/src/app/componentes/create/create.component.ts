@@ -7,16 +7,18 @@ import { MatDatepickerToggle } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { Todo } from '../../models/todo';
 import { TodoService } from '../../services/todo.service';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
+
+
 
 @Component({
-  selector: 'app-update',
+  selector: 'app-create',
   standalone: true,
   imports: [FormsModule, MatDatepickerModule,  MatFormFieldModule, MatInputModule,  MatDatepickerToggle,  MatNativeDateModule],
-  templateUrl: './update.component.html',
-  styleUrl: './update.component.css'
+  templateUrl: './create.component.html',
+  styleUrl: './create.component.css'
 })
-export class UpdateComponent {
+export class CreateComponent {
 
   todo: Todo = {
 
@@ -28,47 +30,24 @@ export class UpdateComponent {
 
   }
 
-  constructor(private router: Router, private service: TodoService, private route: ActivatedRoute) { }
+  constructor(private router: Router, private service: TodoService) { }
 
-  ngOnInit(): void{
+  create(): void{
 
+    this.service.create(this.todo).subscribe((response) => {
 
-    this.todo.id = this.route.snapshot.paramMap.get("id")!;
-    this.findById();
-
-  }
-
-
-  findById(): void{
-
-
-    this.service.findById(this.todo.id).subscribe((response) => {
-
-
-      this.todo = response;
-
-    })
-
-
-  }
-
-  update(): void{
-
-    this.service.update(this.todo).subscribe((reponse) =>{
-
-      this.service.message("Informações atualizadas com sucesso!")
+      this.service.message('To-do criado com sucesso!');
       this.router.navigate([''])
-
-
 
     }, err => {
 
 
-      this.service.message("Falha ao atualizar o To-d")
-      this.router.navigate([''])
+      this.service.message('Falha ao criar To-do');
 
 
-    });
+    })
+
+
 
   }
 
@@ -78,6 +57,5 @@ export class UpdateComponent {
     this.router.navigate([''])
 
   }
-
 
 }

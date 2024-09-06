@@ -27,7 +27,7 @@ mat-card {
   border: none;
   background-color: #ececec;
   border-radius: 0;
-  box-shadow: 0 16px 24px rgba(175, 126, 126, 0.24), 0 6px 8px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 16px 24px rgba(0, 0, 0, 0.24), 0 6px 8px rgba(0, 0, 0, 0.12);
 }
 
 .badge button {
