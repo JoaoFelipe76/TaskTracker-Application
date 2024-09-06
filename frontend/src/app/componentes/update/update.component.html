@@ -1,0 +1,34 @@
+<form action="">
+
+  <h1>ATUALIZAR TO-DO</h1>
+
+  <div class="group">
+
+    <input [(ngModel)]="todo.title" name="todo.title" placeholder="Titulo" class="input-field" type="text">
+    <label for="input-field" class="input-label"></label>
+    <span class="input-highlight"></span>
+
+
+    <input [(ngModel)]="todo.descricao" name="todo.descricao" placeholder="Descrição" class="input-field" type="text">
+    <label for="input-field" class="input-label"></label>
+    <span class="input-highlight"></span>
+
+
+    <input [(ngModel)]="todo.dataParaFinalizacao" name="todo.dataParaFinalizacao" type="date" id="input-field"
+      placeholder="Data para finalizar" class="input-field">
+    <label for="input-field" class="input-label">Data para finalizar</label>
+    <span class="input-highlight"></span>
+
+
+  </div>
+
+
+  <div class="buttons">
+    <button class="buttonCriar" (click)="update()">Atualizar</button>
+    <button class="button cancelar" (click)="cancelar()">Cancelar</button>
+  </div>
+
+
+</form>
+
+

@@ -1,0 +1,67 @@
+.container {
+  border: none;
+  width: 85%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-bottom: 60px;
+}
+
+
+.content {
+  width: 100%;
+}
+
+p {
+  text-align: end;
+  font-weight: 500;
+  color: rgb(114, 111, 111);
+  margin-bottom: 0;
+}
+
+
+mat-card {
+  margin-top: 0.8rem;
+  padding: 1rem;
+  border: none;
+  background-color: #ececec;
+  border-radius: 0;
+  box-shadow: 0 16px 24px rgba(175, 126, 126, 0.24), 0 6px 8px rgba(0, 0, 0, 0.12);
+}
+
+.badge button {
+  --bg: #000;
+  --hover-bg:
+  #08ec04;
+  --hover-text: #000;
+  color: #fff;
+  cursor: pointer;
+  border: 1px solid var(--bg);
+  border-radius: 4px;
+  padding: 0.8em 2em;
+  background: var(--bg);
+  transition: 0.2s;
+  margin-top: 3rem;
+}
+
+.badge button:hover {
+  color: var(--hover-text);
+  transform: translate(-0.25rem, -0.25rem);
+  background: var(--hover-bg);
+  box-shadow: 0.25rem 0.25rem var(--bg);
+}
+
+.badge button:active {
+  transform: translate(0);
+  box-shadow: none;
+}
+
+.mat-mdc-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mat-mdc-card:hover {
+  transform: scale(1.05); /* Aumenta o tamanho do card em 5% */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Adiciona uma sombra mais pronunciada */
+}
